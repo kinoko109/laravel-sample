@@ -17,8 +17,8 @@ class TestSeeder extends Seeder
     public function run()
     {
         DB::table('tests')->insert([
-            ['text' => 'aaa'],
-            ['text' => 'bbb'],
+            ['text' => 'aaa', 'created_at' => now()],
+            ['text' => 'bbb', 'created_at' => now()],
         ]);
     }
 }
