@@ -28,6 +28,10 @@
                                     <span>created_at</span>
                                     <span>{{ $contact->created_at }}</span>
                                 </div>
+                                <div>
+                                    <span>詳細</span>
+                                    <a href="{{ route('contacts.show', ['id' => $contact->id]) }}">詳細リンク</a>
+                                </div>
                             </li>
                         @endforeach
                     </ul>
