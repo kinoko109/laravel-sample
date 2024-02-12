@@ -6,7 +6,7 @@
   </x-slot>
 
   <section class="text-gray-600 body-font relative">
-    <form action="{{ route('contacts.store') }}" method="post">
+    <form action="{{ route('contacts.update', ['id' => $contact->id]) }}" method="post">
     @csrf
       <div class="container px-5 py-24 mx-auto">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -71,7 +71,7 @@
               <div class="relative">
                   <label for="contact" class="leading-7 text-sm text-gray-600">お問い合わせ内容</label>
                   <textarea id="contact" name="contact"
-                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">value="{{ $contact->contact }}"</textarea>
+                  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ $contact->contact }}</textarea>
               </div>
             </div>
 
