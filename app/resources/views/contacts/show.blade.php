@@ -53,14 +53,14 @@
             <div class="p-2 w-full">
               <div class="relative">
                 <label class="leading-7 text-sm text-gray-600">性別</label>
-                <p>{{ $gender }}</p>
+                <p>{{ $checkedGender }}</p>
               </div>
             </div>
 
             <div class="p-2 w-full">
               <div class="relative">
                 <label class="leading-7 text-sm text-gray-600">年齢</label>
-                <p>{{ $age }}</p>
+                <p>{{ $checkedAge }}</p>
               </div>
             </div>
 
