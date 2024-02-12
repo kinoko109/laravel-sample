@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,15 @@ Route::get('/', function () {
 });
 
 Route::get('tests/test', [TestController::class, 'index']);
+
+// Route::resource('contacts', ContactFormController::class);
+
+Route::prefix('contacts')->middleware(['auth'])
+->controller(ContactFormController::class)
+->name('contacts.')
+->group(function() {
+    Route::get('/', 'index')->name('index');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
