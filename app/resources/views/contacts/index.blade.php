@@ -9,7 +9,28 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    contacts index
+                    <ul>
+                        @foreach($contacts as $contact)
+                            <li>
+                                <div>
+                                    <span>id</span>
+                                    <span>{{ $contact->id }}</span>
+                                </div>
+                                <div>
+                                    <span>name</span>
+                                    <span>{{ $contact->name }}</span>
+                                </div>
+                                <div>
+                                    <span>title</span>
+                                    <span>{{ $contact->title }}</span>
+                                </div>
+                                <div>
+                                    <span>created_at</span>
+                                    <span>{{ $contact->created_at }}</span>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
                     <br>
                     <a class="" href="{{ route('contacts.create') }}">新規登録</a>
                 </div>
