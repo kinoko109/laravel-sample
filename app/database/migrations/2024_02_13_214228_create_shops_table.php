@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->foreignId('area_id')->constrained(); // constrained -> 外部キー制約。親側で定義されている値以外を許容しない。
             $table->timestamps();
         });
     }

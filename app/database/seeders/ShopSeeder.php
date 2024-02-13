@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ShopSeeder extends Seeder
 {
@@ -14,6 +15,11 @@ class ShopSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('shops')->insert([
+            ['name' => '高級食パン屋', 'area_id' => 1],
+            ['name' => '高級クロワッサン屋', 'area_id' => 2],
+            ['name' => '高級コッペパン屋', 'area_id' => 3],
+            ['name' => '高級カレーパン屋', 'area_id' => 2],
+        ]);
     }
 }

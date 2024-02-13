@@ -14,8 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([TestSeeder::class]);
-        $this->call([UserSeeder::class]);
+        $this->call([
+            TestSeeder::class,
+            UserSeeder::class,
+            AreaSeeder::class,
+            ShopSeeder::class,
+            RouteSeeder::class,
+            RouteShopSeeder::class,
+        ]);
 
         \App\Models\ContactForm::factory(10)->create();
 

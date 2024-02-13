@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class AreaSeeder extends Seeder
+class RouteShopSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,10 +15,10 @@ class AreaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('areas')->insert([
-            ['name' => '東京', 'sort_no' => 1],
-            ['name' => '大阪', 'sort_no' => 2],
-            ['name' => '福岡', 'sort_no' => 3],
+        DB::table('route_shop')->insert([
+            ['route_id' => 1, 'shop_id' => 1],
+            ['route_id' => 2, 'shop_id' => 2],
+            ['route_id' => 3, 'shop_id' => 3],
         ]);
     }
 }
