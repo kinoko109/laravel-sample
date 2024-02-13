@@ -38,6 +38,7 @@
                     <br>
                     <a class="" href="{{ route('contacts.create') }}">新規登録</a>
                 </div>
+                {{ $contacts->links() }}
             </div>
         </div>
     </div>
