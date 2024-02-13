@@ -3,6 +3,10 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             お問い合わせ一覧
         </h2>
+        <form action="{{ route('contacts.index') }}" method="get">
+            <input type="text" name="search" placeholder="検索">
+            <button type="submit">検索</button>
+        </form>
     </x-slot>
 
     <div class="py-12">
